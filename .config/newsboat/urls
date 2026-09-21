@@ -1,0 +1,39 @@
+# ===========================================
+# Smart Query Folders
+# ===========================================
+"query:Linux News:tags # \"linux\""
+"query:Dev & Coding News:tags # \"coding\""
+"query:Opensource news:tags # \"opensource\""
+"query:Rust News:tags # \"rust\""
+"query:Omarchy News:tags # \"omarchy\""
+
+# ===========================================
+# Linux
+# ===========================================
+https://omarchy.org/news/rss.xml linux omarchy
+https://www.phoronix.com/rss.php linux
+https://www.omgubuntu.co.uk/feed linux ubuntu
+https://distrowatch.com/news/dw.xml linux
+https://www.reddit.com/r/linux/.rss linux
+
+# ===========================================
+# Dev & Coding
+# ===========================================
+https://news.ycombinator.com/rss coding
+https://dev.to/feed coding
+https://github.blog/engineering/feed/ coding
+https://newsletter.pragmaticengineer.com/feed coding
+https://changelog.com/podcast/feed coding
+
+# ===========================================
+# Opensource
+# ===========================================
+https://fosspost.org/feed/ opensource
+https://www.reddit.com/r/opensource/.rss opensource
+
+# ===========================================
+# Rust News
+# ===========================================
+https://blog.rust-lang.org/feed.xml rust
+https://this-week-in-rust.org/rss.xml rust
+https://www.reddit.com/r/rust/.rss rust

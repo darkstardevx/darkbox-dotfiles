@@ -1,0 +1,51 @@
+# User agent that satisfies Reddit (avoids HTTP 429 rate-limit blocks)
+user-agent "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+# Auto-fetch all feeds when newsboat opens, and refresh periodically
+auto-reload yes
+reload-time 60
+suppress-first-reload no
+
+# Browser
+browser "firejail --join=brave xdg-open %u"
+
+# ===========================================
+# Color scheme: dark theme (yellow/cyan/blue accents)
+# ===========================================
+# Feed list & UI
+color background          white   black
+color listnormal          color250 black
+color listnormal_unread   yellow  black   bold
+color listfocus           black   blue    bold
+color listfocus_unread    black   blue    bold
+color title               white   blue    bold
+color info                black   cyan    bold
+
+# Article view text
+color article             color255 black
+
+# Link-number hints (press a number to open a URL in-article)
+color hint-key            black   yellow  bold
+color hint-keys-delimiter color255 yellow
+color hint-separator      black   yellow  bold
+color hint-description    black   yellow
+
+# ===========================================
+# Colors within articles
+# ===========================================
+# Highlight URLs, link-numbers and metadata labels in the article view
+highlight article "https?://[^ ]+"           cyan    default  underline
+highlight article "\\[[0-9]+\\]"             green   default  bold
+highlight article "\\[image\\ [0-9]+\\]"     cyan    default  bold
+highlight article "^(Title|Date|Author):.*$" magenta default  bold
+highlight article "^Link.*$"                 cyan    default  bold
+
+# Flag feeds that have unread items (the article-list already colours unread
+# rows via listnormal_unread / listfocus_unread above)
+highlight-feed "unread_count > 0"            yellow  black    bold
+
+# Highlight the separator rule in the feed list
+highlight feedlist "^─.*$"                    cyan    black    bold
+
+# Colored search results
+search-highlight-colors                       yellow  color57  bold
