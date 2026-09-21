@@ -1,0 +1,73 @@
+-- Personal overrides only — add binds here that differ from or extend Omarchy's defaults.
+-- Don't duplicate binds Omarchy already provides in default/hypr/bindings/, or they'll fire twice.
+
+o.bind("CTRL + ALT + Return", "Floating Kitty", "kitty --class floating-kitty", {})
+
+-- Replace Omarchy's Files shortcut and its tiled-fullscreen binding.
+hl.unbind("SUPER + SHIFT + F")
+hl.unbind("SUPER + CTRL + F")
+o.bind("SUPER + CTRL + F", "File manager", { omarchy = "nautilus" })
+o.bind("SUPER + SHIFT + F", "Tiled full screen", "omarchy-hyprland-window-tiled-fullscreen-toggle")
+
+-- Float toggle (SUPER+T) and pop-out (SUPER+O) at a size that fits 1366x768
+-- instead of the defaults, which spill past the top/bottom of the screen.
+hl.unbind("SUPER + T")
+hl.unbind("SUPER + O")
+o.bind("SUPER + T", "Toggle window floating (screen-fit)", "omarchy-hyprland-window-float-fit 1180 640")
+o.bind("SUPER + O", "Pop window out (screen-fit)", "omarchy-hyprland-window-pop 1180 640")
+
+
+o.bind("SUPER + ALT + T", "Toggle Marktext", hl.dsp.workspace.toggle_special("marktext"), {})
+o.bind("SUPER + ALT + O", "Toggle Obsidian", hl.dsp.workspace.toggle_special("obsidian"), {})
+o.bind("SUPER + ALT + I", "Toggle OBS Studio", hl.dsp.workspace.toggle_special("obs"), {})
+o.bind("SUPER + ALT + M", "Toggle Spotify", hl.dsp.workspace.toggle_special("spotify"), {})
+
+o.bind("SUPER + ALT + C", "Toggle Chromium", hl.dsp.workspace.toggle_special("chromium"), {})
+
+o.bind("SUPER + ALT + J", "Toggle dropdown terminal", "dropdown-terminal", {})
+
+o.bind("SUPER + ALT + B", "Toggle Bruno", hl.dsp.workspace.toggle_special("bruno"), {})
+
+o.bind("SUPER + ALT + U", "Omniscient popup", "omniscient-popup", {})
+
+o.bind("SUPER + ALT + P", "Toggle Cybernote", hl.dsp.workspace.toggle_special("cybernote"), {})
+
+o.bind("SUPER + ALT + W", "Toggle RoninSuite", hl.dsp.workspace.toggle_special("ronin"), {})
+
+-- Keep Omarchy's system-lock shortcut, and place DNS Switcher on SUPER+ALT+L.
+hl.unbind("SUPER + CTRL + L")
+o.bind("SUPER + CTRL + L", "Lock system", "omarchy-system-lock", {})
+hl.unbind("SUPER + ALT + L")
+o.bind("SUPER + ALT + L", "Toggle DNS Switcher", hl.dsp.workspace.toggle_special("dnswitcher"), {})
+
+-- o.bind("SUPER + SHIFT + G", "Omamail", "omarchy shell shell toggle omamail '{}'")
+
+o.bind("SUPER + CTRL + M", "Mission Control", "omarchy-shell shell toggle io.github.darkstardevx.missioncontrol", {})
+
+o.bind(
+  "SUPER + ALT + Y",
+  "Toggle Cyberdeck",
+  hl.dsp.workspace.toggle_special("cyberdeck"),
+  {}
+)
+
+o.bind(
+  "SUPER + ALT + V",
+  "Toggle Bitwarden",
+  hl.dsp.workspace.toggle_special("bitwarden"),
+  {}
+)
+
+o.bind(
+  "SUPER + ALT + G",
+  "Toggle ChatGPT",
+  hl.dsp.workspace.toggle_special("chatgpt"),
+  {}
+)
+
+o.bind(
+  "SUPER + ALT + D",
+  "Toggle Google Drive",
+  hl.dsp.workspace.toggle_special("google-drive"),
+  {}
+)
