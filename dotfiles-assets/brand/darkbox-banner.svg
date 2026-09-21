@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Darkbox dotfiles</title>
+  <desc id="desc">A dark neon banner for the darkbox dotfiles repository.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#071014"/>
+      <stop offset=".55" stop-color="#101d24"/>
+      <stop offset="1" stop-color="#17112a"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop stop-color="#53f5d0" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#53f5d0"/>
+      <stop offset="1" stop-color="#8b7cff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#53f5d0" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1198" height="358" rx="27" fill="url(#grid)" stroke="#53f5d0" stroke-opacity=".25"/>
+  <path d="M0 275 C155 220 183 312 322 248 S545 210 660 264 867 324 1200 202" fill="none" stroke="url(#line)" stroke-width="2"/>
+  <path d="M0 285 C154 230 183 322 322 258 S545 220 660 274 867 334 1200 212" fill="none" stroke="#53f5d0" stroke-opacity=".15" stroke-width="12" filter="url(#glow)"/>
+  <g transform="translate(74 70)">
+    <rect width="190" height="190" rx="42" fill="#0a161b" stroke="#53f5d0" stroke-opacity=".55" stroke-width="2"/>
+    <path d="M95 29 153 63v66l-58 32-58-32V63z" fill="#111f29" stroke="#53f5d0" stroke-width="3"/>
+    <path d="m95 55 34 20v38l-34 19-34-19V75z" fill="#17132d" stroke="#8b7cff" stroke-width="3"/>
+    <path d="M78 96h34M95 79v34" stroke="#ffb454" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="95" cy="29" r="6" fill="#53f5d0"/><circle cx="37" cy="63" r="6" fill="#53f5d0"/><circle cx="153" cy="63" r="6" fill="#53f5d0"/>
+  </g>
+  <g fill="#f1f7f6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <text x="330" y="132" font-size="22" letter-spacing="6" fill="#53f5d0">DARKBOX / DOTFILES</text>
+    <text x="330" y="192" font-size="54" font-weight="700">A deliberate workspace.</text>
+    <text x="333" y="232" font-size="19" fill="#a9bfbe">tracked by intent · tuned for the real machine</text>
+    <text x="333" y="294" font-size="15" letter-spacing="3" fill="#ffb454">OMARCHY  •  ARCH  •  CYBERCORE</text>
+  </g>
+  <circle cx="1080" cy="80" r="5" fill="#ff6b9d"/><circle cx="1110" cy="80" r="5" fill="#ffb454"/><circle cx="1140" cy="80" r="5" fill="#53f5d0"/>
+</svg>
